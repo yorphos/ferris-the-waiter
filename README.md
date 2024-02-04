@@ -16,6 +16,13 @@ By default, `cargo-leptos` uses `nightly` Rust, `cargo-generate`, and `sass`. If
 FERRIS_WAITER_CONFIG=config.toml cargo leptos watch
 ```
 
+## Getting a bcrypt hash for the `password` field in the config
+A simple and easy way to grab a hash is to just slap something like this in `main.rs` and run the dev server.
+``` rust
+    println!("{}", bcrypt::hash("MY_PASSWORD", 12));
+```
+
+
 ## Compiling for Release
 ```bash
 cargo leptos build --release

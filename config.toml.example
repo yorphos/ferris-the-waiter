@@ -1,0 +1,4 @@
+password_hash = "A BCRYPT HASH"
+
+[commands]
+echo = "echo hi"
