@@ -42,8 +42,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let commands_resource = Arc::new(config.commands);
     let password_hash_resource = Arc::new(PasswordHashString(config.password_hash));
 
-    println!("{}", bcrypt::hash("MY_PASSWORD", 12)?);
-
     // build our application with a route
     let app = Router::new()
         .leptos_routes(&leptos_options, routes, App)
